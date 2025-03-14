@@ -1,0 +1,173 @@
+name: MapRVA Data Hub
+icon: https://maprva.org/img/logo-mono.svg
+description: Open data of Richmond, primarily sourced from OpenStreetMap.
+resources:
+  - name: Sidewalks
+    description: |
+      <p>
+      All sidewalks and crossings in Richmond in OpenStreetMap
+      </p>
+      <details>
+        <summary>Preview</summary>
+        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/osm-sidewalks.geojson"></iframe>
+      </details>
+    labels:
+      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/osm-sidewalks.geojson
+            filename: osm-sidewalks.geojson
+          - name: Build Script
+            link: https://data.maprva.org/build-osm-sidewalks.js
+            filename: build-osm-sidewalks
+      - title: Services
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/osm-sidewalks.geojson
+  - name: Jan 2025 Water Crisis Survey Data
+    description: |
+      Anonymized and analyzed data from
+      <a target="_blank" href="https://maprva.org/projects/water-crisis">MapRVA's efforts to map the Jan 2025 water crisis in Richond</a>.
+    labels:
+      - Source - <a target="_blank" href="https://maprva.org/projects/water-crisis">MapRVA</a>
+      - License - <a target="_blank" href="https://github.com/MapRVA/2025-water-crisis#licensing">CC-BY 4.0</a>
+      - Source Code - <a target="_blank" href="https://github.com/maprva/2025-water-crisis">Github</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: Most Common Degree of Water Loss
+            link: https://maprva.github.io/2025-water-crisis/mode_severity.geojson
+            filename: mode_severity.geojson
+          - name: Most Severe Degree of Water Loss
+            link: https://maprva.github.io/2025-water-crisis/max_severity.geojson
+            filename: max_severity.geojson
+          - name: Average Duration of "Fully Lost Water"
+            link: https://maprva.github.io/2025-water-crisis/sev1_mean_duration.geojson
+            filename: sev1_mean_duration.geojson
+          - name: Average Duration of "Down to Just a Trickle"
+            link: https://maprva.github.io/2025-water-crisis/sev2_mean_duration.geojson
+            filename: sev2_mean_duration.geojson
+          - name: Average Duration of "Water Pressure was Reduced"
+            link: https://maprva.github.io/2025-water-crisis/sev3_mean_duration.geojson
+            filename: sev3_mean_duration.geojson
+          - name: Most Common Degree of Water Loss by Census Block
+            link: https://maprva.github.io/2025-water-crisis/census_block_mode_severity.geojson
+            filename: census_block_mode_severity.geojson
+          - name: Raw CSV of reports anonymized to resolution=9 H3 cells
+            link: https://raw.githubusercontent.com/MapRVA/2025-water-crisis/refs/heads/main/docs/raw-h3.csv
+            filename: raw-h3.csv
+  - name: Area Masks
+    description: |
+      <p>
+      Inverted polygons (masks) of different areas. Useful for Ultra queries to de-emphasize
+      where data is not loaded
+      </p>
+      <details>
+        <summary>Preview</summary>
+        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=---%0Aoptions:%20{bounds:%20[-77.605018,37.443381,-77.380657,37.602264]}%0AfitBounds:%20false%0A---%0Ahttps://maprva.org/map-data/rva-mask.geojson"></iframe>
+      </details>
+    labels:
+      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: Richmond
+            link: https://data.maprva.org/rva-mask.geojson
+            filename: rva-mask.geojson
+          - name: Richmond, Henrico, and Chesterfield
+            link: https://data.maprva.org/greater-rva-mask.geojson
+            filename: greater-rva-mask.geojson
+          - name: Virginia
+            link: https://data.maprva.org/va-mask.geojson
+            filename: va-mask.geojson
+          - name: Build Script
+            link: https://data.maprva.org/build-masks
+            filename: build-masks
+      - title: Services
+        rows:
+          - name: Richmond
+            link: https://data.maprva.org/rva-mask.geojson
+          - name: Richmond, Henrico, and Chesterfield
+            link: https://data.maprva.org/greater-rva-mask.geojson
+          - name: Virginia
+            link: https://data.maprva.org/va-mask.geojson
+  - name: Protomaps Basemap
+    description: |
+      <p>
+      A <a target="_blank" href="https://protomaps.com">Protomaps</a>
+      basemap of Virginia.
+      </p>
+      <p>
+      <b>Note:</b> styles depend on the
+      <a target="_blank" href="https://docs.protomaps.com/pmtiles/maplibre">PMTiles for MapLibre GL</a>
+      protocol adapter.
+      </p>
+      <details>
+        <summary>Preview</summary>
+        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/light/en.json"></iframe>
+      </details>
+    labels:
+      - Source -
+        <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+        &amp;
+        <a target="_blank" href="https://protomaps.com/">Protomaps</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+      - Source Code - <a target="_blank" href="https://github.com/maprva/protomaps-ghpages">Github</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: PMTiles
+            link: https://maprva.github.io/protomaps-ghpages/tiles.pmtiles
+            filename: tiles.pmtiles
+      - title: Services
+        rows:
+          - name: PMTiles
+            link: pmtiles://https://maprva.github.io/protomaps-ghpages/tiles.pmtiles
+          - name: MapLibre Style (Light)
+            link: https://maprva.github.io/protomaps-ghpages/styles/light/en.json
+            preview: https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/light/en.json
+          - name: MapLibre Style (Dark)
+            link: https://maprva.github.io/protomaps-ghpages/styles/dark/en.json
+            preview: https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/dark/en.json
+          - name: MapLibre Style (Data Viz - White)
+            link: https://maprva.github.io/protomaps-ghpages/styles/white/en.json
+            preview: https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/white/en.json
+          - name: MapLibre Style (Data Viz - Greyscale)
+            link: https://maprva.github.io/protomaps-ghpages/styles/grayscale/en.json
+            preview: https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/grayscale/en.json
+          - name: MapLibre Style (Data Viz - Black)
+            link: https://maprva.github.io/protomaps-ghpages/styles/black/en.json
+            preview: https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/black/en.json
+  - name: Census Block Groups (2020)
+    description: |
+      <p>
+      Census Bureau Block Groups Geography.
+      </p>
+      <p>
+      Represents 2020 Census Block Groups. It is the smallest geographical unit for which the bureau publishes sample data, i.e data which is only collected from a fraction of all households.
+      </p>
+      <p>
+      Original source TIGER file data was adjusted largely along the James River to better fit the City's GIS basemapping, and along creeks and other places where the Census had essentially done a poor job of following observable features. This is a clean version of census geography and will map nicely as compared to match earlier decades' census layers that are also in the City's GIS and were "adjusted" from their earlier TIGER files.
+      </p>
+      <details>
+        <summary>Preview</summary>
+        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https%3A%2F%2Fservices1.arcgis.com%2Fk3vhq11XkBNeeOfM%2Farcgis%2Frest%2Fservices%2FCensus_Block_Group_2020%2FFeatureServer%2F0%2Fquery%3FoutFields%3D*%26where%3D1%253D1%26f%3Dgeojson"></iframe>
+      </details>
+    labels:
+      - Source - <a target="_blank" href="https://richmond-geo-hub-cor.hub.arcgis.com/datasets/cor::census-block-group-2020/about">Richmond GeoHub</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: GeoJSON
+            link: https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Census_Block_Group_2020/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+            filename: rva-census-bocks.geojson
+      - title: Services
+        rows:
+          - name: GeoJSON
+            link: https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Census_Block_Group_2020/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
+          - name: Esri FeatureServer
+            link: https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Census_Block_Group_2020/FeatureServer

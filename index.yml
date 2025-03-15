@@ -3,14 +3,10 @@ icon: https://maprva.org/img/logo-mono.svg
 description: Open data of Richmond, primarily sourced from OpenStreetMap.
 resources:
   - name: Sidewalks
-    description: |
-      <p>
-      All sidewalks and crossings in Richmond in OpenStreetMap
-      </p>
-      <details>
-        <summary>Preview</summary>
-        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/osm-sidewalks.geojson"></iframe>
-      </details>
+    description: All sidewalks and crossings in Richmond in OpenStreetMap
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/osm-sidewalks.geojson"></iframe>
     labels:
       - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
       - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
@@ -61,14 +57,11 @@ resources:
             filename: raw-h3.csv
   - name: Area Masks
     description: |
-      <p>
       Inverted polygons (masks) of different areas. Useful for Ultra queries to de-emphasize
       where data is not loaded
-      </p>
-      <details>
-        <summary>Preview</summary>
-        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=---%0Aoptions:%20{bounds:%20[-77.605018,37.443381,-77.380657,37.602264]}%0AfitBounds:%20false%0A---%0Ahttps://maprva.org/map-data/rva-mask.geojson"></iframe>
-      </details>
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=---%0Aoptions:%20{bounds:%20[-77.605018,37.443381,-77.380657,37.602264]}%0AfitBounds:%20false%0A---%0Ahttps://maprva.org/map-data/rva-mask.geojson"></iframe>
     labels:
       - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
       - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
@@ -105,11 +98,9 @@ resources:
       <b>Note:</b> styles depend on the
       <a target="_blank" href="https://docs.protomaps.com/pmtiles/maplibre">PMTiles for MapLibre GL</a>
       protocol adapter.
-      </p>
-      <details>
-        <summary>Preview</summary>
-        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/light/en.json"></iframe>
-      </details>
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/light/en.json"></iframe>
     labels:
       - Source -
         <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
@@ -153,10 +144,9 @@ resources:
       <p>
       Original source TIGER file data was adjusted largely along the James River to better fit the City's GIS basemapping, and along creeks and other places where the Census had essentially done a poor job of following observable features. This is a clean version of census geography and will map nicely as compared to match earlier decades' census layers that are also in the City's GIS and were "adjusted" from their earlier TIGER files.
       </p>
-      <details>
-        <summary>Preview</summary>
-        <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https%3A%2F%2Fservices1.arcgis.com%2Fk3vhq11XkBNeeOfM%2Farcgis%2Frest%2Fservices%2FCensus_Block_Group_2020%2FFeatureServer%2F0%2Fquery%3FoutFields%3D*%26where%3D1%253D1%26f%3Dgeojson"></iframe>
-      </details>
+    details:
+      - summary: Preview
+        preview: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https%3A%2F%2Fservices1.arcgis.com%2Fk3vhq11XkBNeeOfM%2Farcgis%2Frest%2Fservices%2FCensus_Block_Group_2020%2FFeatureServer%2F0%2Fquery%3FoutFields%3D*%26where%3D1%253D1%26f%3Dgeojson"></iframe>
     labels:
       - Source - <a target="_blank" href="https://richmond-geo-hub-cor.hub.arcgis.com/datasets/cor::census-block-group-2020/about">Richmond GeoHub</a>
     tables:

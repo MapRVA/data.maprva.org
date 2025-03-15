@@ -115,6 +115,12 @@
           {{/labels}}
         </section>
         <section>{{{description}}}</section>
+        {{#details}}
+        <details>
+          <summary>{{summary}}</summary>
+          {{{content}}}
+        </details>
+        {{/details}}
         {{#tables}}
         <section>
           <div class="table">

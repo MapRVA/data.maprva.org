@@ -1,6 +1,13 @@
 name: MapRVA Data Hub
 icon: https://maprva.org/img/logo-mono.svg
-description: Open data of Richmond, primarily sourced from OpenStreetMap.
+description: |
+  Open data of Richmond, carefully curated by <a target="_blank" href="https://maprva.org">MapRVA</a>
+  and <a target="_blank" href="https://openstreetmap.org">OpenStreetMap</a> contributors.
+footer: |
+  © 2025 MapRVA
+  <div style="float:right">
+    <a target="_blank" href="https://maprva.org">maprva.org</a>
+  </div>
 resources:
   - name: Sidewalks
     description: All sidewalks and crossings in Richmond in OpenStreetMap
@@ -133,31 +140,3 @@ resources:
           - name: MapLibre Style (Data Viz - Black)
             link: https://maprva.github.io/protomaps-ghpages/styles/black/en.json
             preview: https://overpass-ultra.us/#map&style=https://maprva.github.io/protomaps-ghpages/styles/black/en.json
-  - name: Census Block Groups (2020)
-    description: |
-      <p>
-      Census Bureau Block Groups Geography.
-      </p>
-      <p>
-      Represents 2020 Census Block Groups. It is the smallest geographical unit for which the bureau publishes sample data, i.e data which is only collected from a fraction of all households.
-      </p>
-      <p>
-      Original source TIGER file data was adjusted largely along the James River to better fit the City's GIS basemapping, and along creeks and other places where the Census had essentially done a poor job of following observable features. This is a clean version of census geography and will map nicely as compared to match earlier decades' census layers that are also in the City's GIS and were "adjusted" from their earlier TIGER files.
-      </p>
-    details:
-      - summary: Preview
-        preview: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https%3A%2F%2Fservices1.arcgis.com%2Fk3vhq11XkBNeeOfM%2Farcgis%2Frest%2Fservices%2FCensus_Block_Group_2020%2FFeatureServer%2F0%2Fquery%3FoutFields%3D*%26where%3D1%253D1%26f%3Dgeojson"></iframe>
-    labels:
-      - Source - <a target="_blank" href="https://richmond-geo-hub-cor.hub.arcgis.com/datasets/cor::census-block-group-2020/about">Richmond GeoHub</a>
-    tables:
-      - title: Downloads
-        rows:
-          - name: GeoJSON
-            link: https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Census_Block_Group_2020/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
-            filename: rva-census-bocks.geojson
-      - title: Services
-        rows:
-          - name: GeoJSON
-            link: https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Census_Block_Group_2020/FeatureServer/0/query?outFields=*&where=1%3D1&f=geojson
-          - name: Esri FeatureServer
-            link: https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Census_Block_Group_2020/FeatureServer

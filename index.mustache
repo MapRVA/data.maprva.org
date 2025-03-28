@@ -9,12 +9,21 @@
     <link rel="shortcut icon" href="{{icon}}" type="image/x-icon" />
     <style>
       html {
+        height: 100%;
         box-sizing: border-box;
         font-size: 16px;
         font-family: sans-serif;
       }
       body {
-        margin: 1.5em;
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        max-width: 1000px;
+        margin: auto;
+      }
+      footer {
+        padding: 1em 0;
+        border-top: 1px solid rgb(127,127,127);
       }
       *, *:before, *:after {
         box-sizing: inherit;
@@ -25,10 +34,6 @@
         text-decoration: none;
       }
 
-      .container {
-        max-width: 1000px;
-        margin: 2em auto;
-      }
       h1 a {
       }
       h1 img, h1 svg {
@@ -88,7 +93,7 @@
     </style>
   </head>
   <body>
-    <main class="container">
+    <header>
       <h1>
         <a href=".">
           {{#icon}}<img alt="icon" src="{{.}}">{{/icon}}
@@ -99,6 +104,8 @@
           {{^name}}Data Catalog{{/name}}
         </a>
       </h1>
+    </header>
+    <main>
       <section>{{{description}}}</section>
       {{#resources}}
       <article>
@@ -139,7 +146,7 @@
                 </div>
                 <div>
                     {{#filename}}
-                    <a download="{{filename}}" href="{{link}}">
+                    <a download="{{filename}}" href="{{link}}" title="download {{filename}}">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
                         <path fill-rule="evenodd" d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2H4Zm4 3.5a.75.75 0 0 1 .75.75v2.69l.72-.72a.75.75 0 1 1 1.06 1.06l-2 2a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 0 1 1.06-1.06l.72.72V6.25A.75.75 0 0 1 8 5.5Z" clip-rule="evenodd" />
                       </svg>
@@ -147,6 +154,12 @@
                     </a>
                     {{/filename}}
                     {{^filename}}
+                    <a title="copy to clipboard" href="javascript:navigator.clipboard.writeText(&quot;{{link}}&quot;)">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                      <path fill-rule="evenodd" d="M15.988 3.012A2.25 2.25 0 0 1 18 5.25v6.5A2.25 2.25 0 0 1 15.75 14H13.5V7A2.5 2.5 0 0 0 11 4.5H8.128a2.252 2.252 0 0 1 1.884-1.488A2.25 2.25 0 0 1 12.25 1h1.5a2.25 2.25 0 0 1 2.238 2.012ZM11.5 3.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 .75.75v.25h-3v-.25Z" clip-rule="evenodd" />
+                      <path fill-rule="evenodd" d="M2 7a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7Zm2 3.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Zm0 3.5a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
                     <code>{{link}}</code>
                     {{/filename}}
                 </div>
@@ -157,4 +170,9 @@
       </article>
       {{/resources}}
     </main>
+    {{#footer}}
+    <footer>
+      {{{footer}}}
+    </footer>
+    {{/footer}}
 </html>

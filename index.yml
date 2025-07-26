@@ -9,8 +9,8 @@ footer: |
     <a target="_blank" href="https://maprva.org">maprva.org</a>
   </div>
 resources:
-  - name: Sidewalks
-    description: All sidewalks and crossings in Richmond in OpenStreetMap
+  - name: Pedestrian Infrastructure
+    description: All sidewalks, crossings, and other footpaths in Richmond in OpenStreetMap
     details:
       - summary: Preview
         content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/osm-sidewalks.geojson"></iframe>

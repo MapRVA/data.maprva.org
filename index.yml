@@ -10,7 +10,7 @@ footer: |
   </div>
 resources:
   - name: Pedestrian Infrastructure
-    description: All sidewalks, crossings, and other footpaths in Richmond in OpenStreetMap
+    description: Sidewalks, crossings, and other footpaths in Richmond.
     details:
       - summary: Preview
         content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/osm-sidewalks.geojson"></iframe>
@@ -30,6 +30,27 @@ resources:
         rows:
           - name: GeoJSON
             link: https://data.maprva.org/osm-sidewalks.geojson
+  - name: Surveillance Devices
+    description: Security cameras, ALPRs, gunshot detectors, and more in Richmond, Chesterfield and Henrico.
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/osm-surveillance.geojson"></iframe>
+    labels:
+      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/osm-surveillance.geojson
+            filename: osm-surveillance.geojson
+          - name: Build Script
+            link: https://data.maprva.org/build-osm-surveillance.js
+            filename: build-osm-surveillance
+      - title: Services
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/osm-surveillance.geojson
   - name: Jan 2025 Water Crisis Survey Data
     description: |
       Anonymized and analyzed data from

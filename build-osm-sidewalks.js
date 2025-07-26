@@ -5,8 +5,7 @@ queryOverpass(
   `
   area[wikidata=Q43421][type=boundary] -> .searchArea;
   (
-    nwr[highway=footway][footway=sidewalk](area.searchArea);
-    nwr[highway=footway][footway=crossing](area.searchArea);
+    nwr["highway"~"footway|steps"]["footway"!="link"](area.searchArea);
   );
   out geom meta;
   `,

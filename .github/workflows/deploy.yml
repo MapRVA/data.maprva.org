@@ -34,6 +34,7 @@ jobs:
       - name: Build datasets
         run: |
           node build-osm-sidewalks.js
+          node build-osm-surveillance.js
           node build-masks.js
       - uses: actions/setup-go@v5
         with:

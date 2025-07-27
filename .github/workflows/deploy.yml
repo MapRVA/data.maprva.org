@@ -1,5 +1,8 @@
 name: Deploy to Github Pages
 on:
+  schedule:
+    - cron:
+        "00 06 * * *" # run at 06:00 UTC every day
   push:
     branches: ["main"]
   # Allows you to run this workflow manually from the Actions tab

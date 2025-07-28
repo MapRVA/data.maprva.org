@@ -4,7 +4,7 @@ description: |
   Open data of Richmond, carefully curated by <a target="_blank" href="https://maprva.org">MapRVA</a>
   and <a target="_blank" href="https://openstreetmap.org">OpenStreetMap</a> contributors.
 footer: |
-  © 2025 MapRVA
+  © 2025 MapRVA | <a href="https://github.com/MapRVA/data.maprva.org">Source Code</a>
   <div style="float:right">
     <a target="_blank" href="https://maprva.org">maprva.org</a>
   </div>

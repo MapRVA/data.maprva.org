@@ -9,24 +9,26 @@ queryOverpass(
     if (error) {
       console.error(error);
     } else {
-      data = data.features.filter(f => f.geometry.type === "Polygon")[0];
+      data = data.features.filter((f) => f.geometry.type === "Polygon")[0];
+      fs.writeFileSync("va-area.geojson", JSON.stringify(data));
       data = mask(data);
       fs.writeFileSync("va-mask.geojson", JSON.stringify(data));
     }
   },
-)
+);
 queryOverpass(
   `nwr[wikidata=Q43421][type=boundary]; out geom;`,
   (error, data) => {
     if (error) {
       console.error(error);
     } else {
-      data = data.features.filter(f => f.geometry.type === "Polygon")[0];
+      data = data.features.filter((f) => f.geometry.type === "Polygon")[0];
+      fs.writeFileSync("rva-area.geojson", JSON.stringify(data));
       data = mask(data);
       fs.writeFileSync("rva-mask.geojson", JSON.stringify(data));
     }
   },
-)
+);
 queryOverpass(
   `
   (
@@ -40,10 +42,13 @@ queryOverpass(
     if (error) {
       console.error(error);
     } else {
-      data.features = data.features.filter(f => f.geometry.type === "Polygon");
+      data.features = data.features.filter(
+        (f) => f.geometry.type === "Polygon",
+      );
       data = union(data);
+      fs.writeFileSync("rva-area.geojson", JSON.stringify(data));
       data = mask(data);
       fs.writeFileSync("greater-rva-mask.geojson", JSON.stringify(data));
     }
   },
-)
+);

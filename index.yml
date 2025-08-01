@@ -9,6 +9,54 @@ footer: |
     <a target="_blank" href="https://maprva.org">maprva.org</a>
   </div>
 resources:
+  - name: Areas and Masks
+    description: |
+      Area polygons and their inverted counterparts.
+      Masks are useful for Ultra queries to de-emphasize where data is not loaded.
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=---%0Aoptions:%20{bounds:%20[-77.605018,37.443381,-77.380657,37.602264]}%0AfitBounds:%20false%0A---%0Ahttps://maprva.org/map-data/rva-mask.geojson"></iframe>
+    labels:
+      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: Richmond Area
+            link: https://data.maprva.org/rva-area.geojson
+            filename: rva-area.geojson
+          - name: Richmond Mask
+            link: https://data.maprva.org/rva-mask.geojson
+            filename: rva-mask.geojson
+          - name: Richmond, Henrico, and Chesterfield Area
+            link: https://data.maprva.org/greater-rva-area.geojson
+            filename: greater-rva-area.geojson
+          - name: Richmond, Henrico, and Chesterfield Mask
+            link: https://data.maprva.org/greater-rva-mask.geojson
+            filename: greater-rva-mask.geojson
+          - name: Virginia Area
+            link: https://data.maprva.org/va-area.geojson
+            filename: va-area.geojson
+          - name: Virginia Mask
+            link: https://data.maprva.org/va-mask.geojson
+            filename: va-mask.geojson
+          - name: Build Script
+            link: https://data.maprva.org/build-areas.js
+            filename: build-areas.js
+      - title: Services
+        rows:
+          - name: Richmond Area
+            link: https://data.maprva.org/rva-area.geojson
+          - name: Richmond Mask
+            link: https://data.maprva.org/rva-mask.geojson
+          - name: Richmond, Henrico, and Chesterfield Area
+            link: https://data.maprva.org/greater-rva-area.geojson
+          - name: Richmond, Henrico, and Chesterfield Mask
+            link: https://data.maprva.org/greater-rva-mask.geojson
+          - name: Virginia Area
+            link: https://data.maprva.org/va-area.geojson
+          - name: Virginia Mask
+            link: https://data.maprva.org/va-mask.geojson
   - name: Pedestrian Infrastructure
     description: Sidewalks, crossings, and other footpaths in Richmond.
     details:
@@ -83,39 +131,6 @@ resources:
           - name: Raw CSV of reports anonymized to resolution=9 H3 cells
             link: https://raw.githubusercontent.com/MapRVA/2025-water-crisis/refs/heads/main/docs/raw-h3.csv
             filename: raw-h3.csv
-  - name: Area Masks
-    description: |
-      Inverted polygons (masks) of different areas. Useful for Ultra queries to de-emphasize
-      where data is not loaded
-    details:
-      - summary: Preview
-        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=---%0Aoptions:%20{bounds:%20[-77.605018,37.443381,-77.380657,37.602264]}%0AfitBounds:%20false%0A---%0Ahttps://maprva.org/map-data/rva-mask.geojson"></iframe>
-    labels:
-      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
-      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
-    tables:
-      - title: Downloads
-        rows:
-          - name: Richmond
-            link: https://data.maprva.org/rva-mask.geojson
-            filename: rva-mask.geojson
-          - name: Richmond, Henrico, and Chesterfield
-            link: https://data.maprva.org/greater-rva-mask.geojson
-            filename: greater-rva-mask.geojson
-          - name: Virginia
-            link: https://data.maprva.org/va-mask.geojson
-            filename: va-mask.geojson
-          - name: Build Script
-            link: https://data.maprva.org/build-masks
-            filename: build-masks
-      - title: Services
-        rows:
-          - name: Richmond
-            link: https://data.maprva.org/rva-mask.geojson
-          - name: Richmond, Henrico, and Chesterfield
-            link: https://data.maprva.org/greater-rva-mask.geojson
-          - name: Virginia
-            link: https://data.maprva.org/va-mask.geojson
   - name: Protomaps Basemap
     description: |
       <p>

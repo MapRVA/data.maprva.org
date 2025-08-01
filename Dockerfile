@@ -6,16 +6,14 @@ COPY package.json .
 COPY package-lock.json .
 RUN npm ci
 
-COPY build-masks.js .
-RUN node build-masks.js
+COPY build-areas.js .
+RUN node build-areas.js
 
 COPY build-osm-sidewalks.js .
 RUN node build-osm-sidewalks.js
 
 COPY build-osm-surveillance.js .
 RUN node build-osm-surveillance.js
-
-RUN ls
 
 FROM golang:1.24-alpine as go
 

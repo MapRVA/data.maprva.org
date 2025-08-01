@@ -10,6 +10,7 @@ footer: |
   </div>
 resources:
   - name: Areas and Masks
+    slug: areas
     description: |
       Area polygons and their inverted counterparts.
       Masks are useful for Ultra queries to de-emphasize where data is not loaded.
@@ -58,6 +59,7 @@ resources:
           - name: Virginia Mask
             link: https://data.maprva.org/va-mask.geojson
   - name: Pedestrian Infrastructure
+    slug: pedestrian-infrastructure
     description: Sidewalks, crossings, and other footpaths in Richmond.
     details:
       - summary: Preview
@@ -79,6 +81,7 @@ resources:
           - name: GeoJSON
             link: https://data.maprva.org/osm-sidewalks.geojson
   - name: Surveillance Devices
+    slug: surveillance
     description: Security cameras, ALPRs, gunshot detectors, and more in Richmond, Chesterfield and Henrico.
     details:
       - summary: Preview
@@ -100,6 +103,7 @@ resources:
           - name: GeoJSON
             link: https://data.maprva.org/osm-surveillance.geojson
   - name: Jan 2025 Water Crisis Survey Data
+    slug: 2025-water-crisis
     description: |
       Anonymized and analyzed data from
       <a target="_blank" href="https://maprva.org/projects/water-crisis">MapRVA's efforts to map the Jan 2025 water crisis in Richond</a>.
@@ -132,6 +136,7 @@ resources:
             link: https://raw.githubusercontent.com/MapRVA/2025-water-crisis/refs/heads/main/docs/raw-h3.csv
             filename: raw-h3.csv
   - name: Protomaps Basemap
+    slug: protomaps-basemap
     description: |
       <p>
       A <a target="_blank" href="https://protomaps.com">Protomaps</a>

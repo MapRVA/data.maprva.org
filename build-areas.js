@@ -46,7 +46,7 @@ queryOverpass(
         (f) => f.geometry.type === "Polygon",
       );
       data = union(data);
-      fs.writeFileSync("rva-area.geojson", JSON.stringify(data));
+      fs.writeFileSync("greater-rva-area.geojson", JSON.stringify(data));
       data = mask(data);
       fs.writeFileSync("greater-rva-mask.geojson", JSON.stringify(data));
     }

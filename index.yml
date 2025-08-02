@@ -8,6 +8,29 @@ footer: |
   <div style="float:right">
     <a target="_blank" href="https://maprva.org">maprva.org</a>
   </div>
+areas:
+  - name: City of Richmond
+    slug: rva
+    selectors:
+      - "[wikidata=Q43421][type=boundary]"
+  - name: Henrico County
+    slug: henrico
+    selectors:
+      - "[wikidata=Q341639][type=boundary]"
+  - name: Chesterfield County
+    slug: chesterfield
+    selectors:
+      - "[wikidata=Q340608][type=boundary]"
+  - name: Greater Richmond Area
+    slug: greater-rva
+    selectors:
+      - "[wikidata=Q43421][type=boundary]"
+      - "[wikidata=Q341639][type=boundary]"
+      - "[wikidata=Q340608][type=boundary]"
+  - name: Virginia
+    slug: va
+    selectors:
+      - "[wikidata=Q1370][type=boundary]"
 resources:
   - name: Areas and Masks
     slug: areas

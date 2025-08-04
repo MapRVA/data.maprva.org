@@ -9,6 +9,9 @@ RUN npm ci
 COPY build-areas.js .
 RUN node build-areas.js
 
+COPY build-osm-roads.js .
+RUN node build-osm-roads.js
+
 COPY build-osm-sidewalks.js .
 RUN node build-osm-sidewalks.js
 

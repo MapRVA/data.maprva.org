@@ -58,6 +58,28 @@ resources:
             link: https://data.maprva.org/va-area.geojson
           - name: Virginia Mask
             link: https://data.maprva.org/va-mask.geojson
+  - name: Roads
+    slug: roads
+    description: All roads.
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/rva-roads.geojson"></iframe>
+    labels:
+      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/rva-roads.geojson
+            filename: rva-roads.geojson
+          - name: Build Script
+            link: https://data.maprva.org/build-osm-roads.js
+            filename: build-osm-roads
+      - title: Services
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/rva-roads.geojson
   - name: Pedestrian Infrastructure
     slug: pedestrian-infrastructure
     description: Sidewalks, crossings, and other footpaths in Richmond.

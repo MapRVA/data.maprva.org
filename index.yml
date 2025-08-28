@@ -80,6 +80,28 @@ resources:
         rows:
           - name: GeoJSON
             link: https://data.maprva.org/rva-roads.geojson
+  - name: Buildings
+    slug: buildings
+    description: All buildings.
+    details:
+      - summary: Preview
+        content: <iframe loading="lazy" height="400" width="100%" src="https://overpass-ultra.us/#map&query=https://data.maprva.org/rva-buildings.geojson"></iframe>
+    labels:
+      - Source - <a target="_blank" href="https://openstreetmap.org/">OpenStreetMap</a>
+      - License - <a target="_blank" href="https://openstreetmap.org/copyright">ODbL</a>
+    tables:
+      - title: Downloads
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/rva-buildings.geojson
+            filename: rva-roads.geojson
+          - name: Build Script
+            link: https://data.maprva.org/build-osm-buildings.js
+            filename: build-osm-buildings
+      - title: Services
+        rows:
+          - name: GeoJSON
+            link: https://data.maprva.org/rva-buildings.geojson
   - name: Pedestrian Infrastructure
     slug: pedestrian-infrastructure
     description: Sidewalks, crossings, and other footpaths in Richmond.
